@@ -18,8 +18,8 @@ public class Tema1 {
     public void ejercicio1() {
         // variables
         double x1 = 2, x2 = 0.5, x3 = 1.3;
-        double y1 = 2, y2 = 0.5, y3 = 1.3;
-        double z1 = 2, z2 = 0.5, z3 = 8.9;
+        double y1 = 3, y2 = 10, y3 = 4.2;
+        double z1 = 4, z2 = 5, z3 = 8.9;
 
         // operations
         Function<Double, Double> op1 = (Double x) -> x / 3.0 + 8.0;
@@ -29,22 +29,24 @@ public class Tema1 {
         // print results
         TriFunction<Double, Double, Double, Double> printResults = (Double x, Double y, Double z) -> {
             System.out.println("CÁLCULOS ARITMÉTICOS");
-            System.out.println("---------");
+            System.out.println("--------------------");
             System.out.println("Valor para la x: " + x);
             System.out.println("Valor para la y: " + y);
             System.out.println("Valor para la z: " + z);
 
             System.out.println("\nRESULTADO");
             System.out.println("---------");
-            System.out.println("OPERACION_1" + op1.apply(x));
-            System.out.println("OPERACION_2" + op2.apply(x, y, z));
-            System.out.println("OPERACION_3" + op3.apply(x, y));
+            System.out.println("OPERACION_1: " + op1.apply(x));
+            System.out.println("OPERACION_2: " + op2.apply(x, y, z));
+            System.out.println("OPERACION_3: " + op3.apply(x, y));
             return null;
         };
 
         // execution
         printResults.apply(x1, y1, z1);
+        System.out.println("\n······························\n");
         printResults.apply(x2, y2, z2);
+        System.out.println("\n······························\n");
         printResults.apply(x3, y3, z3);
     }
 }
