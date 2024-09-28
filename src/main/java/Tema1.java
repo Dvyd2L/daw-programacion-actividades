@@ -27,7 +27,7 @@ public class Tema1 {
         BiFunction<Double, Double, Double> op3 = (Double x, Double y) -> (Math.pow(x, 2) + 3 * x * y + Math.pow(y, 2)) / Math.pow(x, -2);
 
         // print results
-        TriFunction<Double, Double, Double, Double> printResults = (Double x, Double y, Double z) -> {
+        TriFunction<Double, Double, Double, Void> printResults = (Double x, Double y, Double z) -> {
             System.out.println("CÁLCULOS ARITMÉTICOS");
             System.out.println("--------------------");
             System.out.println("Valor para la x: " + x);
