@@ -1,4 +1,4 @@
-package interfaces;
+package daw.programacion.interfaces;
 
 @FunctionalInterface
 public interface TriFunction<A, B, C, R> {
